@@ -1,0 +1,50 @@
+
+{% extends "layout.html" %}
+{% from "_formhelpers.html" import render_field %}
+{% block navbar %}
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-black" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="{{ url_for('home') }}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
+    <a href="{{ url_for('register') }}" class="w3-bar-item w3-button w3-padding-large w3-white">Book Now</a>
+    <a href="{{ url_for('details') }}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Details</a>
+    <a href="{{ url_for('contact') }}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contact us</a>
+  </div>
+</div>
+{% endblock navbar %}
+{% block pgtitle %}
+Book a Shuttle
+{% endblock pgtitle %}
+{% block para1 %}
+      
+      
+<form method="post" action="/register">
+  <dl>
+
+  	{{form.csrf_token}}
+    
+    {{ render_field(form.name,class="form-control") }}
+    {{ render_field(form.email,class="form-control") }}
+    {{ render_field(form.phone,class="form-control") }}
+    <div class="form-check form-check-inline ">
+    	{{ render_field(form.friday_go,class="form-check-input") }}
+    </div>
+     <div class="form-check form-check-inline">	
+    	{{ render_field(form.sat_go,class="form-check-input") }}
+    </div>
+     <div class="form-check form-check-inline">	
+    	{{ render_field(form.sat_ret,class="form-check-input") }}
+    </div>	
+    	{{ render_field(form.sun_ret,class="form-check-input") }}
+	</div>
+    {{ render_field(form.faculty,class="form-check-input") }}
+  </dl>
+  <p><input class="btn btn-primary" type=submit value=Register>
+</form>
+
+      
+{% endblock para1 %}
+{% block para3 %}
+Going Home this weekend? Book your shuttle now. It's not only for the students, faculty too can book a shuttle through this system as well.
+{% endblock para3 %}
+

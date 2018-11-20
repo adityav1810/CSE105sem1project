@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block navbar %}
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-black" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+ <a href="{{ url_for('home') }}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
+    <a href="{{ url_for('register') }}" class="w3-bar-item w3-button w3-padding-large w3-white">Book Now</a>
+    <a href="{{ url_for('details') }}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Details</a>
+    <a href="{{ url_for('contact') }}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contact us</a>
+    
+  </div>
+</div>
+{% endblock navbar %}
+{% block pgtitle %}
+ADMIN LOGIN
+{% endblock pgtitle %}
+{% block para1 %}
+<form method="post" action="/admin1">
+	<div class="form-group">
+		Username:
+		<input type="Text" name="username" value="" class="form-check form-check-inline">
+	</div>
+	<div class="form-group">
+		Password: 
+		<input type="Password" name="username" value="" class="form-check form-check-inline">
+	</div>
+	<button type="submit" class="btn btn-primary">Login</button>
+</form>	
+{% endblock para1 %}
+{% block para2 %}
+Going Home this weekend? Book your shuttle now. and its not only for the students. Faculty too can get their transport Bookings done through this system
+{% endblock para2 %}

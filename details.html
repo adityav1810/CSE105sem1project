@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block navbar %}
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-black" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="{{ url_for('home') }}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
+    <a href="{{ url_for('register') }}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Book Now</a>
+    <a href="{{ url_for('details') }}" class="w3-bar-item w3-button w3-padding-large w3-white">Details</a>
+    <a href="{{ url_for('contact') }}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contact Now</a>
+  </div>
+</div>
+{% endblock navbar %}
+{% block pgtitle %}
+Shuttle Details
+{% endblock pgtitle %}
+{% block para1 %}
+Regular Shuttle Service Timings:
+
+{% endblock para1 %}
+{% block para2 %}
+
+Friday Going: From University to Noida City Centre (6:00pm)<br>
+Saturday Going: From University to Great India Palace Mall,Greater Noida (10:00am)<br>
+Saturday Return: From Great India Palace Mall, Greater Noida to University (5:30pm)<br>
+Sunday Return: From Great India Palace Mall, Greater Noida to University (5:30pm)<br>
+{% endblock para2 %}
+
+
+
+{% block para3 %}
+Going Home this weekend? Book your shuttle now. It's not only for the students, faculty too can book a shuttle through this system as well.
+{% endblock para3 %}

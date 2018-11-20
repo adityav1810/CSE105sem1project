@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block navbar %}
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-black" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="{{ url_for('home') }}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
+    <a href="{{ url_for('register') }}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Book Now</a>
+        <a href="{{ url_for('details') }}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Details</a>
+
+    <a href="{{ url_for('contact') }}" class="w3-bar-item w3-button w3-padding-large w3-white">Contact Us</a>
+    
+  </div>
+</div>
+{% endblock navbar %}
+{% block pgtitle %}
+CONTACT US
+{% endblock pgtitle %}
+{% block para1 %}
+<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d14032.457444039466!2d77.59048965!3d28.4459688!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1542014344753" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+{% endblock para1 %}
+{% block para2 %}
+
+<p text style="bold">Landline: 011-41654123</p>
+<p>Email: transport@bennett.edu.in</p>
+{% endblock para2 %}
+
+
+
+{% block para3 %}
+Going Home this weekend? Book your shuttle now. It's not only for the students, faculty too can book a shuttle through this system as well.
+{% endblock para3 %}
